@@ -1,0 +1,146 @@
+/* style.css */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #e0e7ff; /* Softer background color for ambient feel */
+    /* Changed to a lavender-themed radial gradient for ambient light */
+    background-image: radial-gradient(circle at center, #e6e6fa 0%, #d8bfd8 70%, #c3aed6 100%); /* Lavender shades */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #e6e6fa; /* Solid lavender background color for the container */
+    /* Enhanced radial gradient for ambient lighting within the container */
+    background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.8) 0%, rgba(230, 230, 250, 0.8) 70%, rgba(216, 191, 216, 0.8) 100%);
+    padding: 30px;
+    border-radius: 16px; /* More rounded corners */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15), 0 5px 10px rgba(0, 0, 0, 0.05); /* Enhanced shadow for "lifted" effect */
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    text-align: center; /* Center text within the container */
+    animation: fadeIn 1s ease-out; /* Simple fade-in animation for the container */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1, h2 {
+    color: #2d3748; /* Darker text for better contrast */
+}
+
+.link-item {
+    background-color: #f0f4ff; /* Lighter background for link items */
+    padding: 15px;
+    border-radius: 10px; /* Rounded corners for link items */
+    border: 1px solid #c3dafe; /* Softer border */
+    display: flex;
+    justify-content: center; /* Centers the link-content block within the link-item */
+    align-items: center;
+    margin-bottom: 15px; /* More space between links */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for link items */
+    
+    /* Ensure all link items are centered and fit content */
+    width: fit-content; /* Make the box fit its content */
+    min-width: 180px; /* Minimum width to prevent too small boxes */
+    max-width: 300px; /* Maximum width to prevent too wide boxes */
+    margin-left: auto; /* Center the block itself */
+    margin-right: auto; /* Center the block itself */
+    padding-left: 20px; /* Add more padding for better spacing around content */
+    padding-right: 20px; /* Add more padding for better spacing around content */
+}
+
+.link-item:hover {
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Stronger shadow on hover */
+}
+
+.link-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Ensure content inside link-content is centered */
+    width: 100%; /* Take full width to allow internal centering */
+}
+
+.link-content a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 600; /* Slightly bolder font for links */
+    word-break: break-all; /* Allow text to wrap */
+    transition: color 0.2s ease-in-out;
+    text-align: center; /* Ensure text within the link is centered */
+    flex-grow: 1; /* Allow link text to grow and take available space */
+}
+
+.link-content a:hover {
+    color: #3730a3; /* Darker blue on hover */
+    text-decoration: underline;
+}
+
+.favicon {
+    width: 20px; /* Slightly larger favicon */
+    height: 20px;
+    margin-right: 10px; /* More space */
+    vertical-align: middle;
+    border-radius: 4px; /* Slightly more rounded */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Small shadow for favicon */
+    flex-shrink: 0; /* Prevent favicon from shrinking */
+}
+
+/* Styling for social links container */
+.social-links-container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent items from wrapping by default on larger screens */
+    justify-content: center; /* Center the social link items */
+    gap: 8px; /* Gap between social link items */
+}
+
+.social-links-container .link-item {
+    margin-bottom: 0; /* Remove vertical margin as gap handles spacing */
+    background-color: #e6f0ff; /* Slightly different background for social links */
+    border-color: #a7c0ff; /* Slightly different border for social links */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* Lighter shadow for social links */
+    
+    /* Specific sizing for social link items */
+    min-width: 150px; /* Smaller minimum width for social boxes */
+    max-width: 200px; /* Smaller maximum width for social boxes */
+}
+
+/* Ensure content within social link items is centered */
+.social-links-container .link-item .link-content {
+    justify-content: center; /* Center favicon and text within social link-content */
+}
+
+@media (max-width: 480px) {
+    .link-item {
+        max-width: 100%; /* Allow all link items to take full width on small screens */
+        width: 100%; /* Ensure full width on small screens */
+    }
+    .social-links-container {
+        flex-wrap: wrap; /* Allow wrapping on very small screens */
+    }
+    .social-links-container .link-item {
+        width: 100%; /* Stack on very small screens */
+        max-width: 100%;
+    }
+}
+.container {
+    background-color: #e6e6fa; /* Solid lavender background color for the container */
+    /* Enhanced radial gradient for ambient lighting within the container */
+    background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.8) 0%, rgba(230, 230, 250, 0.8) 70%, rgba(216, 191, 216, 0.8) 100%);
+    /* ... other properties ... */
+}
